@@ -6,15 +6,13 @@ from airflow.models import Variable
 from airflow.operators.empty import EmptyOperator
 from airflow.operators.python import PythonOperator
 
-# конфигурация DAG
+
 OWNER = "Luda"
 DAG_ID = "raw_from_api_to_s3"
 
-# используемые таблицы в DAG
 LAYER = "raw"
 SOURCE = "earthquake"
 
-# s3 / minio
 ACCESS_KEY = Variable.get("access_key", default_var="DUMMY_KEY")
 SECRET_KEY = Variable.get("secret_key", default_var="DUMMY_SECRET")
 
@@ -27,7 +25,7 @@ SHORT_DESCRIPTION = "SHORT DESCRIPTION"
 
 args = {
     "owner": OWNER,
-    "start_date": pendulum.datetime(2025, 5, 1, tz="Europe/Moscow"),
+    "start_date": pendulum.datetime(2025, 6, 1, tz="Europe/Moscow"),
     "catchup": True,
     "retries": 3,
     "retry_delay": pendulum.duration(hours=1),
