@@ -17,8 +17,7 @@ data_lakehouse_earthquake — это пет-проект, реализующий
 - Docker
 
 ## Установка и запуск
-1. Требования
-Свободные порты:
+1. Требования к свободным портам:
 - 8081 — Airflow Webserver
 - 5432 — PostgreSQL (Airflow metadata)
 - 5431 — PostgreSQL DWH (данные о землетрясениях)
@@ -61,14 +60,14 @@ data_lakehouse_earthquake — это пет-проект, реализующий
    docker exec -i <postgres_dwh_container_id> psql -U postgres -d postgres < pg_script.sql
 
 ## Пример работы
-   Данные в MinIO
+   ###### Данные в MinIO
   <img width="800" alt="Данные в MinIO" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20minio.png" />
 
-   Данные в PostgreSQL
+   ###### Данные в PostgreSQL
   <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20postgres.png" />
 
-   Конвейер данных
+   ###### Конвейер данных
   <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20airflow.png" />
   
-   Пример дашборда
+   ###### Пример дашборда
   <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20metabase.png" />
