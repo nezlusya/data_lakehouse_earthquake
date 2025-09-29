@@ -48,12 +48,12 @@ data_lakehouse_earthquake — это пет-проект, реализующий
    - Войдите, используя логин `minioadmin` и пароль `minioadmin`  
    - Создайте новый бакет с именем, например, `earthquakes-bucket`  
    - Используйте это имя бакета в DAG’ах Airflow для сохранения и загрузки данных
-   - Получите access key и secret key
+   - Получите `access key` и `secret key`
 
 2. Активируйте DAG’и в Airflow
    - Перейдите в Airflow UI: [http://localhost:8081](http://localhost:8081)
    - Войдите, используя логин `airflow` и пароль `airflow`  
-   - Во вкладке Admin добавьте переменные access key и secret key
+   - Во вкладке Admin добавьте переменные `access key` и `secret key`
    - Включите DAG’и
 
 3. Инициализируйте таблицы в PostgreSQL DWH
@@ -61,4 +61,4 @@ data_lakehouse_earthquake — это пет-проект, реализующий
    docker exec -i <postgres_dwh_container_id> psql -U postgres -d postgres < pg_script.sql
 
   ## Пример работы
-  
+  <img width="872" alt="Данные в MinIO" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20minio.png" />
