@@ -44,7 +44,7 @@ data_lakehouse_earthquake — это пет-проект, реализующий
 ## Первичная настройка
 
 1. Создайте бакет в MinIO
-   - Перейдите в MinIO Console: [http://localhost:9001](http://localhost:9001)  
+   - Перейдите в MinIO: [http://localhost:9001](http://localhost:9001)  
    - Войдите, используя логин `minioadmin` и пароль `minioadmin`  
    - Создайте новый бакет с именем, например, `earthquakes-bucket`  
    - Используйте это имя бакета в DAG’ах Airflow для сохранения и загрузки данных
@@ -60,5 +60,15 @@ data_lakehouse_earthquake — это пет-проект, реализующий
    ```bash
    docker exec -i <postgres_dwh_container_id> psql -U postgres -d postgres < pg_script.sql
 
-  ## Пример работы
-  <img width="872" alt="Данные в MinIO" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20minio.png" />
+## Пример работы
+   Данные в MinIO
+  <img width="800" alt="Данные в MinIO" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20minio.png" />
+
+   Данные в PostgreSQL
+  <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20postgres.png" />
+
+   Конвейер данных
+  <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20airflow.png" />
+  
+   Пример дашборда
+  <img width="800" alt="Данные в PostgreSQL" src="https://github.com/nezlusya/data_lakehouse_earthquake/blob/main/photo/Screenshot%20metabase.png" />
